@@ -15,7 +15,6 @@ export default function Header() {
     { href: "/#portfolio", label: "Portfolio" },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/blog", label: "Blog" },
-    { href: "/dashboard", label: "Dashboard" },
   ];
 
   const handleLinkClick = () => {

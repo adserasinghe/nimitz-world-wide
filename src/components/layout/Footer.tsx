@@ -60,9 +60,6 @@ export default function Footer() {
             <Link href="/#contact" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Contact Us
             </Link>
-             <Link href="/dashboard" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Dashboard
-            </Link>
           </div>
         </div>
       </div>
