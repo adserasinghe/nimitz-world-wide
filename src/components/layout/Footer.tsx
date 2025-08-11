@@ -45,6 +45,9 @@ export default function Footer() {
             <Link href="/portfolio" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Portfolio
             </Link>
+             <Link href="/contact" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+              Contact Us
+            </Link>
           </div>
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Legal</h4>
@@ -57,8 +60,14 @@ export default function Footer() {
           </div>
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Connect</h4>
-            <Link href="/contact" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Contact Us
+            <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+              Facebook
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+              Twitter
+            </Link>
+            <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+              LinkedIn
             </Link>
           </div>
         </div>
