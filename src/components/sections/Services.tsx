@@ -50,7 +50,7 @@ export default function Services() {
         </div>
          <div className="mt-12 text-center">
             <Button asChild variant="outline">
-                <Link href="/services">View All Services</Link>
+                <Link href="/services">See More Our Services</Link>
             </Button>
         </div>
       </div>
