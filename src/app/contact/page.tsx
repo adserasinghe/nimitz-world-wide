@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 export default function ContactPage() {
   return (
-    <div>
+    <div className="animate-in fade-in-50 duration-500">
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
         <Image
           src="https://placehold.co/1920x1080.png"
           alt="Contact Us"
-          layout="fill"
+          fill
           objectFit="cover"
-          className="z-0"
+          className="z-0 object-cover"
           data-ai-hint="contact communication"
         />
         <div className="absolute inset-0 bg-black/50 z-10" />

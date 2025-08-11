@@ -45,7 +45,7 @@ const mockPosts = [
 
 export default function BlogPage() {
     return (
-        <div className="container mx-auto py-12 px-4 md:px-6">
+        <div className="container mx-auto py-12 px-4 md:px-6 animate-in fade-in-50 duration-500">
             <div className="text-center space-y-4 mb-12">
                 <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl font-headline">
                     The Nimitz Blog

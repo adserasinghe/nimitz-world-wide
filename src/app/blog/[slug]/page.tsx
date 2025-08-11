@@ -28,7 +28,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
     };
 
     return (
-        <div className="container mx-auto py-12 px-4 md:px-6">
+        <div className="container mx-auto py-12 px-4 md:px-6 animate-in fade-in-50 duration-500">
             <article className="max-w-4xl mx-auto">
                 <div className="space-y-4 text-center mb-12">
                     <Badge variant="outline">{post.category}</Badge>
