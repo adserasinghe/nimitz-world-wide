@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Contact() {
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground">
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-primary text-primary-foreground animate-in fade-in-50 duration-500">
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline mb-4">

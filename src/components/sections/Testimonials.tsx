@@ -28,7 +28,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32">
+    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 animate-in fade-in-50 duration-500">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center space-y-4 mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
