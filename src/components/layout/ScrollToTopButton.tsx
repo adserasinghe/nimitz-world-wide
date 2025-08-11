@@ -3,35 +3,43 @@
 
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 export default function ScrollToTopButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-
-  const handleScroll = () => {
-    // Visibility logic
-    if (window.scrollY > 300) {
-      setIsVisible(true);
-    } else {
-      setIsVisible(false);
-    }
-
-    // Progress logic
-    const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    if (totalHeight > 0) {
-        const progress = (window.scrollY / totalHeight) * 100;
-        setScrollProgress(progress);
-    } else {
-        setScrollProgress(0);
-    }
-  };
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    setIsMounted(true);
   }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    const handleScroll = () => {
+      // Visibility logic
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+
+      // Progress logic
+      const totalHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (totalHeight > 0) {
+          const progress = (window.scrollY / totalHeight) * 100;
+          setScrollProgress(progress);
+      } else {
+          setScrollProgress(0);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [isMounted]);
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -39,6 +47,10 @@ export default function ScrollToTopButton() {
       behavior: 'smooth',
     });
   };
+
+  if (!isMounted) {
+    return null;
+  }
 
   const radius = 20;
   const circumference = 2 * Math.PI * radius;
