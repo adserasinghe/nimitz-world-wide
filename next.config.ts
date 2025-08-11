@@ -29,10 +29,10 @@ const nextConfig: NextConfig = {
 if (process.env.NODE_ENV === 'development') {
   nextConfig.experimental = {
     ...nextConfig.experimental,
-    allowedDevOrigins: [
-      'https://*.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
-    ],
   };
+  nextConfig.allowedDevOrigins = [
+    'https://*.cluster-htdgsbmflbdmov5xrjithceibm.cloudworkstations.dev',
+  ];
 }
 
 

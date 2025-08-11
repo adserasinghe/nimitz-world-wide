@@ -76,7 +76,6 @@ export default function PortfolioPage() {
           src="https://placehold.co/1920x1080.png"
           alt="Our Portfolio"
           fill
-          objectFit="cover"
           className="z-0 object-cover"
           data-ai-hint="creative workspace"
         />

@@ -61,7 +61,6 @@ export default function ServicesPage() {
               src="https://placehold.co/1920x1080.png"
               alt="Our Services"
               fill
-              objectFit="cover"
               className="z-0 object-cover"
               data-ai-hint="office background"
           />
