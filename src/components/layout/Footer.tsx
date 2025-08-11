@@ -3,6 +3,7 @@
 import { Logo } from "@/components/logo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { Facebook, Linkedin, Twitter } from "lucide-react";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState<number | null>(null);
@@ -60,13 +61,16 @@ export default function Footer() {
           </div>
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Connect</h4>
-            <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
+              <Facebook className="h-4 w-4" />
               Facebook
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
+              <Twitter className="h-4 w-4" />
               Twitter
             </Link>
-            <Link href="#" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
+              <Linkedin className="h-4 w-4" />
               LinkedIn
             </Link>
           </div>
