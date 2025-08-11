@@ -150,7 +150,7 @@ export default function PortfolioPage() {
             Let's discuss how we can help you achieve your goals. We are here to turn your ideas into reality.
           </p>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/#contact">Get a Free Quote</Link>
+            <Link href="/contact">Get a Free Quote</Link>
           </Button>
         </div>
       </section>

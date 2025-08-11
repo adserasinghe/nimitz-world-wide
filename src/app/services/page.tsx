@@ -195,7 +195,7 @@ export default function ServicesPage() {
             We're Ready to Bring Quality Professional Web Design
           </h2>
           <Button asChild size="lg" variant="secondary">
-            <Link href="/#contact">Request a Quote</Link>
+            <Link href="/contact">Request a Quote</Link>
           </Button>
         </div>
       </section>

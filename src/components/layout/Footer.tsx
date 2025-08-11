@@ -54,7 +54,7 @@ export default function Footer() {
           </div>
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Connect</h4>
-            <Link href="/#contact" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="/contact" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Contact Us
             </Link>
           </div>

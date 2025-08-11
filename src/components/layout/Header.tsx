@@ -14,6 +14,7 @@ export default function Header() {
     { href: "/services", label: "Services" },
     { href: "/portfolio", label: "Portfolio" },
     { href: "/blog", label: "Blog" },
+    { href: "/contact", label: "Contact" },
   ];
 
   const handleLinkClick = () => {
@@ -38,7 +39,7 @@ export default function Header() {
         </nav>
         <div className="hidden items-center gap-4 md:flex">
           <Button asChild>
-            <Link href="/#contact">Get a Quote</Link>
+            <Link href="/contact">Get a Quote</Link>
           </Button>
         </div>
         <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
@@ -65,7 +66,7 @@ export default function Header() {
                 ))}
               </nav>
               <Button asChild size="lg" onClick={handleLinkClick}>
-                <Link href="/#contact">Get a Quote</Link>
+                <Link href="/contact">Get a Quote</Link>
               </Button>
             </div>
           </SheetContent>
