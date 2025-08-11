@@ -2,28 +2,38 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 
 export default function Preloader() {
-  const [isLoading, setIsLoading] = useState(true);
+  const pathname = usePathname();
+  const [isLoading, setIsLoading] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     setIsMounted(true);
+    // Hide preloader on initial mount after a delay
+    const timer = setTimeout(() => setIsLoading(false), 1500);
+    return () => clearTimeout(timer);
   }, []);
-
+  
   useEffect(() => {
-    if (isMounted) {
-      const timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 1500); 
+    if (!isMounted) return;
 
-      return () => clearTimeout(timer);
+    // Don't show preloader for the initial path
+    let timer: NodeJS.Timeout;
+    if (pathname) {
+      setIsLoading(true);
+      timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 1000); // Adjust this duration as needed
     }
-  }, [isMounted]);
+
+    return () => clearTimeout(timer);
+  }, [pathname, isMounted]);
 
   if (!isMounted) {
-      return null;
+    return null;
   }
 
   return (
