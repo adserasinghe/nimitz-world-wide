@@ -6,6 +6,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
 import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
+import Preloader from '@/components/layout/Preloader';
 
 export const metadata: Metadata = {
   title: 'Nimitz World Wide',
@@ -28,6 +29,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
       </head>
       <body className={cn("font-body antialiased")}>
+        <Preloader />
         <Header />
         <main>{children}</main>
         <Footer />
