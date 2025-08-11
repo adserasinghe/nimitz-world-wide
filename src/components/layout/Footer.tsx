@@ -1,7 +1,17 @@
+'use client';
+
 import { Logo } from "@/components/logo";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
+
   return (
     <footer className="bg-muted py-8 px-4 md:px-6">
       <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -57,7 +67,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
-        &copy; {new Date().getFullYear()} Nimitz World Wide. All rights reserved.
+        &copy; {currentYear} Nimitz World Wide. All rights reserved.
       </div>
     </footer>
   );
