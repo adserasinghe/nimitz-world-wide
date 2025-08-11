@@ -28,11 +28,6 @@ const services = [
     description: "Improve your online visibility and rank higher on search engines. We drive organic traffic to your site through proven SEO strategies.",
   },
   {
-    icon: <AppWindow className="w-8 h-8 text-primary" />,
-    title: "App Development",
-    description: "We build native and hybrid mobile apps for iOS and Android that are user-friendly and feature-rich.",
-  },
-  {
     icon: <Users className="w-8 h-8 text-primary" />,
     title: "UI/UX Designing",
     description: "We design intuitive and engaging user interfaces that provide a seamless user experience.",
