@@ -9,25 +9,25 @@ const teamMembers = [
   {
     name: "John Doe",
     title: "Founder & CEO",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://placehold.co/200x200.png",
     hint: "man professional portrait"
   },
   {
     name: "Jane Smith",
     title: "Lead Developer",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://placehold.co/200x200.png",
     hint: "woman developer portrait"
   },
   {
     name: "Peter Jones",
     title: "UI/UX Designer",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://placehold.co/200x200.png",
     hint: "man designer portrait"
   },
   {
     name: "Mary Johnson",
     title: "Marketing Specialist",
-    avatar: "https://placehold.co/100x100.png",
+    avatar: "https://placehold.co/200x200.png",
     hint: "woman marketing portrait"
   }
 ];
@@ -60,7 +60,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <Image src="https://placehold.co/600x400.png" alt="Our Story" width={600} height={400} className="rounded-lg shadow-lg" data-ai-hint="office history"/>
+                <Image src="https://placehold.co/800x600.png" alt="Our Story" width={800} height={600} className="rounded-lg shadow-lg" data-ai-hint="office history"/>
             </div>
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Story</div>

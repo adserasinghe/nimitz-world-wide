@@ -6,7 +6,7 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       slug: params.slug,
       title: "The Ultimate Guide to Core Web Vitals",
       description: "Learn how to optimize your site's performance for a better user experience and improved SEO rankings.",
-      image: "https://placehold.co/1200x600.png",
+      image: "https://placehold.co/1280x720.png",
       hint: "speed performance",
       date: "May 15, 2024",
       category: "SEO",
@@ -42,8 +42,8 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
                 <Image
                     src={post.image}
                     alt={post.title}
-                    width={1200}
-                    height={600}
+                    width={1280}
+                    height={720}
                     className="w-full aspect-video object-cover rounded-lg mb-8 shadow-lg"
                     data-ai-hint={post.hint}
                 />

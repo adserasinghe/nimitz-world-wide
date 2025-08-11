@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Innovate Corp Website",
     description: "A complete redesign of a leading tech firm's corporate website, focusing on a clean, modern aesthetic and improved user engagement. Built with Next.js for optimal performance.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/800x600.png",
     hint: "corporate tech",
     tags: ["Web Development", "UI/UX", "Next.js"],
     category: "web",
@@ -17,7 +17,7 @@ const projects = [
   {
     title: "Luxe Fashion E-commerce",
     description: "A high-end e-commerce platform for a luxury fashion brand. Features a seamless checkout experience, and a custom content management system.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/800x600.png",
     hint: "fashion store",
     tags: ["E-commerce", "React", "Node.js"],
     category: "ecommerce",
@@ -25,7 +25,7 @@ const projects = [
   {
     title: "HealthWell Mobile App",
     description: "A cross-platform mobile application for a health and wellness startup, helping users track their fitness goals and connect with trainers.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/800x600.png",
     hint: "fitness app",
     tags: ["App Development", "React Native"],
     category: "app",
@@ -33,7 +33,7 @@ const projects = [
   {
     title: "DataViz SaaS Platform",
     description: "A powerful data visualization dashboard for a SaaS product. We designed and developed an intuitive interface to handle complex data sets.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/800x600.png",
     hint: "data dashboard",
     tags: ["Web App", "React", "Data Visualization"],
     category: "web",
@@ -41,7 +41,7 @@ const projects = [
   {
     title: "LocalEats SEO Overhaul",
     description: "Dramatically improved search engine rankings and local visibility for a restaurant chain through a comprehensive SEO and content strategy.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/800x600.png",
     hint: "restaurant food",
     tags: ["SEO", "Content Marketing"],
     category: "marketing",
@@ -49,7 +49,7 @@ const projects = [
   {
     title: "Artisan Coffee Shopify Store",
     description: "A beautifully crafted Shopify theme and setup for a specialty coffee roaster, resulting in a 60% increase in online sales.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://placehold.co/800x600.png",
     hint: "coffee shop",
     tags: ["E-commerce", "Shopify", "UI/UX"],
     category: "ecommerce",
@@ -116,8 +116,8 @@ export default function PortfolioPage() {
                               <Image
                                 src={project.image}
                                 alt={project.title}
-                                width={600}
-                                height={400}
+                                width={800}
+                                height={600}
                                 className="w-full h-auto object-cover aspect-video group-hover:scale-105 transition-transform duration-300"
                                 data-ai-hint={project.hint}
                               />

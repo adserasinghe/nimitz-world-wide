@@ -9,28 +9,28 @@ export default function Portfolio() {
     {
       title: "Corporate Website Redesign",
       description: "A complete overhaul of a B2B tech company's website, focusing on modern UI/UX and lead generation.",
-      image: "https://placehold.co/600x400.png",
+      image: "https://placehold.co/800x600.png",
       tags: ["Web Development", "UI/UX"],
       hint: "corporate office",
     },
     {
       title: "Fashion E-commerce Store",
       description: "A stylish and performant e-commerce platform for an independent fashion brand, with custom features.",
-      image: "https://placehold.co/600x400.png",
+      image: "https://placehold.co/800x600.png",
       tags: ["E-commerce", "Shopify"],
       hint: "fashion retail",
     },
     {
       title: "Local Business SEO Campaign",
       description: "Increased organic traffic by 200% for a local service business through targeted SEO and content marketing.",
-      image: "https://placehold.co/600x400.png",
+      image: "https://placehold.co/800x600.png",
       tags: ["SEO", "Marketing"],
       hint: "local business",
     },
     {
       title: "SaaS Platform Dashboard",
       description: "Designed and developed a user-friendly and data-rich dashboard for a growing SaaS company.",
-      image: "https://placehold.co/600x400.png",
+      image: "https://placehold.co/800x600.png",
       tags: ["Web App", "React"],
       hint: "dashboard data",
     },
@@ -54,8 +54,8 @@ export default function Portfolio() {
                 <Image
                   src={project.image}
                   alt={project.title}
-                  width={600}
-                  height={400}
+                  width={800}
+                  height={600}
                   className="w-full h-auto object-cover aspect-video group-hover:scale-105 transition-transform duration-300"
                   data-ai-hint={project.hint}
                 />

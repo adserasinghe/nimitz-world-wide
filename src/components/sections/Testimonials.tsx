@@ -8,21 +8,21 @@ export default function Testimonials() {
       name: "Sarah L.",
       title: "CEO, Tech Innovators",
       quote: "Nimitz World Wide transformed our online presence. Their attention to detail and commitment to our vision was outstanding. We couldn't be happier with our new website!",
-      avatar: "https://placehold.co/100x100.png",
+      avatar: "https://placehold.co/200x200.png",
       hint: "woman portrait"
     },
     {
       name: "Mike D.",
       title: "Founder, Urban Style Co.",
       quote: "The e-commerce site they built for us is a game-changer. Sales have increased by 40% since launch. The team was professional, responsive, and delivered on time.",
-      avatar: "https://placehold.co/100x100.png",
+      avatar: "https://placehold.co/200x200.png",
       hint: "man portrait"
     },
     {
       name: "Jessica P.",
       title: "Marketing Director, HealthFirst",
       quote: "Their SEO expertise is unmatched. We went from being invisible on Google to ranking on the first page for our top keywords. Highly recommended!",
-      avatar: "https://placehold.co/100x100.png",
+      avatar: "https://placehold.co/200x200.png",
       hint: "woman professional"
     },
   ];

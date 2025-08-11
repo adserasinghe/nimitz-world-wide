@@ -139,7 +139,7 @@ export default function ServicesPage() {
             </TabsList>
             <TabsContent value="technology" className="pt-6">
               <div className="grid md:grid-cols-2 gap-8 items-center">
-                <Image src="https://placehold.co/600x400.png" alt="Laptop with code" width={600} height={400} className="rounded-lg shadow-lg" data-ai-hint="laptop code"/>
+                <Image src="https://placehold.co/800x600.png" alt="Laptop with code" width={800} height={600} className="rounded-lg shadow-lg" data-ai-hint="laptop code"/>
                 <div>
                   <p className="text-muted-foreground mb-4">
                     We leverage the latest and greatest technologies to build cutting-edge solutions for our clients. Our team is always learning and adapting to stay ahead of the curve.
@@ -155,7 +155,7 @@ export default function ServicesPage() {
             </TabsContent>
             <TabsContent value="support" className="pt-6">
                  <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <Image src="https://placehold.co/600x400.png" alt="Support team" width={600} height={400} className="rounded-lg shadow-lg" data-ai-hint="customer support"/>
+                    <Image src="https://placehold.co/800x600.png" alt="Support team" width={800} height={600} className="rounded-lg shadow-lg" data-ai-hint="customer support"/>
                     <div>
                         <p className="text-muted-foreground mb-4">
                         Our clients are our top priority. We provide dedicated support to ensure your project is a success from start to finish and beyond.
@@ -171,7 +171,7 @@ export default function ServicesPage() {
             </TabsContent>
             <TabsContent value="quality" className="pt-6">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
-                    <Image src="https://placehold.co/600x400.png" alt="Quality check" width={600} height={400} className="rounded-lg shadow-lg" data-ai-hint="quality assurance"/>
+                    <Image src="https://placehold.co/800x600.png" alt="Quality check" width={800} height={600} className="rounded-lg shadow-lg" data-ai-hint="quality assurance"/>
                     <div>
                         <p className="text-muted-foreground mb-4">
                         We are committed to delivering high-quality work that exceeds expectations. Our rigorous quality assurance process ensures your project is bug-free and performant.
