@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
+import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
 
 export const metadata: Metadata = {
   title: 'Nimitz World Wide',
@@ -30,6 +31,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Toaster />
+        <ScrollToTopButton />
       </body>
     </html>
   );
