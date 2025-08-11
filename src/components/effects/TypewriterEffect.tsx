@@ -14,8 +14,15 @@ export function TypewriterEffect({ text, speed = 100, className, loop = false }:
   const [displayedText, setDisplayedText] = useState('');
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     const handleTyping = () => {
       if (loop) {
         if (isDeleting) {
@@ -42,8 +49,8 @@ export function TypewriterEffect({ text, speed = 100, className, loop = false }:
     const timeoutId = setTimeout(handleTyping, isDeleting ? speed / 2 : speed);
 
     return () => clearTimeout(timeoutId);
-  }, [displayedText, isDeleting, index, text, speed, loop]);
+  }, [displayedText, isDeleting, index, text, speed, loop, isMounted]);
 
 
-  return <span className={className}>{displayedText}</span>;
+  return <span className={className}>{isMounted ? displayedText : ''}&nbsp;</span>;
 }
