@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
@@ -36,6 +36,9 @@ export default function Footer() {
           </div>
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Company</h4>
+            <Link href="/about" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+              About Us
+            </Link>
             <Link href="/blog" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Blog
             </Link>
@@ -61,7 +64,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
-        &copy; {currentYear} Nimitz World Wide. All rights reserved.
+        &copy; {currentYear ? currentYear : new Date().getFullYear()} Nimitz World Wide. All rights reserved.
       </div>
     </footer>
   );
