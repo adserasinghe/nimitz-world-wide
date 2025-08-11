@@ -73,7 +73,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="container mx-auto mt-8 border-t pt-4 text-center text-sm text-muted-foreground">
-        &copy; {currentYear ? currentYear : new Date().getFullYear()} Nimitz World Wide. All rights reserved.
+        &copy; {currentYear} Nimitz World Wide. All rights reserved.
       </div>
     </footer>
   );
