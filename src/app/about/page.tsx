@@ -39,9 +39,8 @@ export default function AboutPage() {
         <Image
           src="https://placehold.co/1920x1080.png"
           alt="About Us"
-          layout="fill"
-          objectFit="cover"
-          className="z-0"
+          fill
+          className="z-0 object-cover"
           data-ai-hint="team collaboration"
         />
         <div className="absolute inset-0 bg-black/50 z-10" />
