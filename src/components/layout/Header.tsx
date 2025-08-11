@@ -11,7 +11,7 @@ export default function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
 
   const navLinks = [
-    { href: "/#services", label: "Services" },
+    { href: "/services", label: "Services" },
     { href: "/#portfolio", label: "Portfolio" },
     { href: "/#testimonials", label: "Testimonials" },
     { href: "/blog", label: "Blog" },
