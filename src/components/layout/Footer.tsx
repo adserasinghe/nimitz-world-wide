@@ -24,13 +24,13 @@ export default function Footer() {
         <div className="grid grid-cols-2 gap-4 md:col-span-2 md:grid-cols-4">
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Services</h4>
-            <Link href="/#services" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="/services" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Web Development
             </Link>
-            <Link href="/#services" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="/services" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               E-commerce
             </Link>
-            <Link href="/#services" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="/services" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               SEO
             </Link>
           </div>
@@ -41,9 +41,6 @@ export default function Footer() {
             </Link>
             <Link href="/#portfolio" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Portfolio
-            </Link>
-            <Link href="/#testimonials" className="text-muted-foreground hover:text-foreground" prefetch={false}>
-              Testimonials
             </Link>
           </div>
           <div className="grid gap-2">
