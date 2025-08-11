@@ -7,34 +7,29 @@ import { cn } from '@/lib/utils';
 
 export default function Preloader() {
   const pathname = usePathname();
-  const [isLoading, setIsLoading] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
 
   useEffect(() => {
-    setIsMounted(true);
-    // Hide preloader on initial mount after a delay
-    const timer = setTimeout(() => setIsLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+    if (isInitialLoad) {
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+        setIsInitialLoad(false);
+      }, 1500);
+      return () => clearTimeout(timer);
+    }
+  }, [isInitialLoad]);
   
   useEffect(() => {
-    if (!isMounted) return;
+    if (isInitialLoad) return;
 
-    // Don't show preloader for the initial path
-    let timer: NodeJS.Timeout;
-    if (pathname) {
-      setIsLoading(true);
-      timer = setTimeout(() => {
-        setIsLoading(false);
-      }, 1000); // Adjust this duration as needed
-    }
+    setIsLoading(true);
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
 
     return () => clearTimeout(timer);
-  }, [pathname, isMounted]);
-
-  if (!isMounted) {
-    return null;
-  }
+  }, [pathname, isInitialLoad]);
 
   return (
     <div
