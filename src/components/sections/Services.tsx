@@ -1,5 +1,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Code, ShoppingCart, Search } from "lucide-react";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
@@ -45,6 +47,11 @@ export default function Services() {
               </CardContent>
             </Card>
           ))}
+        </div>
+         <div className="mt-12 text-center">
+            <Button asChild variant="outline">
+                <Link href="/services">View All Services</Link>
+            </Button>
         </div>
       </div>
     </section>
