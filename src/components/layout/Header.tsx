@@ -6,9 +6,12 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Logo } from "@/components/logo";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const pathname = usePathname();
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -32,7 +35,12 @@ export default function Header() {
             <Link
               key={link.label}
               href={link.href}
-              className="text-foreground/70 transition-colors hover:text-foreground"
+              className={cn(
+                "transition-colors hover:text-foreground",
+                pathname === link.href
+                  ? "text-foreground"
+                  : "text-foreground/60"
+              )}
               prefetch={false}
             >
               {link.label}
@@ -56,12 +64,17 @@ export default function Header() {
               <Logo />
               <nav className="grid gap-2 text-lg font-medium">
                 {navLinks.map((link) => (
-                  <Link
+                   <Link
                     key={link.label}
                     href={link.href}
-                    className="flex w-full items-center py-2 text-lg font-semibold"
-                    prefetch={false}
                     onClick={handleLinkClick}
+                    className={cn(
+                      "flex items-center py-2 text-lg font-semibold transition-colors hover:text-foreground",
+                      pathname === link.href
+                        ? "text-foreground"
+                        : "text-foreground/60"
+                    )}
+                    prefetch={false}
                   >
                     {link.label}
                   </Link>
