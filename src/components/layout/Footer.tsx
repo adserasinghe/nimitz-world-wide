@@ -39,7 +39,7 @@ export default function Footer() {
             <Link href="/blog" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Blog
             </Link>
-            <Link href="/#portfolio" className="text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="/portfolio" className="text-muted-foreground hover:text-foreground" prefetch={false}>
               Portfolio
             </Link>
           </div>

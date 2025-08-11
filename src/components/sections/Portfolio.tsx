@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export default function Portfolio() {
   const projects = [
@@ -69,6 +71,11 @@ export default function Portfolio() {
               </CardContent>
             </Card>
           ))}
+        </div>
+        <div className="mt-12 text-center">
+            <Button asChild variant="outline">
+                <Link href="/portfolio">View Full Portfolio</Link>
+            </Button>
         </div>
       </div>
     </section>

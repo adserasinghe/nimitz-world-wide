@@ -17,7 +17,7 @@ export default function Hero() {
               <Link href="/services">Our Services</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/#portfolio">View Our Work</Link>
+              <Link href="/portfolio">View Our Work</Link>
             </Button>
           </div>
         </div>
