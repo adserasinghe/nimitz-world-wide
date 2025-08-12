@@ -71,15 +71,15 @@ export default function Footer() {
           </div>
           <div className="grid gap-2">
             <h4 className="font-headline font-semibold">Connect</h4>
-            <Link href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="https://facebook.com/profile.php?id=61569617552859" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
               <Facebook className="h-4 w-4" />
               Facebook
             </Link>
-            <Link href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
               <XIcon className="h-4 w-4" />
               X
             </Link>
-            <Link href="#" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
+            <Link href="https://www.linkedin.com/company/nimitz-world-wide/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground" prefetch={false}>
               <Linkedin className="h-4 w-4" />
               LinkedIn
             </Link>
