@@ -45,9 +45,9 @@ export default function ContactPage() {
               </p>
               <div className="space-y-2 pt-4">
                 <h3 className="font-headline font-semibold text-xl">Contact Information</h3>
-                <p className="text-muted-foreground">Email: contact@nimitz.world</p>
-                <p className="text-muted-foreground">Phone: +1 (555) 123-4567</p>
-                <p className="text-muted-foreground">Address: 123 Creative Lane, Tech City, 54321</p>
+                <p className="text-muted-foreground">Email: contact@nimitz.lk</p>
+                <p className="text-muted-foreground">Phone: +94777707310</p>
+                <p className="text-muted-foreground">Address: #2/116, Charlesweak State, Mahamawatha, Kekanadura, Matara 81000</p>
               </div>
             </div>
             <div className="w-full max-w-md p-8 rounded-lg shadow-lg bg-card">
