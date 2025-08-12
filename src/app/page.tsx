@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div>
+    <div className="animate-in fade-in-50 duration-500">
       <Hero />
       <Services />
       <Portfolio />
