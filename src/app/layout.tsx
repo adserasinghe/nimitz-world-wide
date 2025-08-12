@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils';
 import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
 import Preloader from '@/components/layout/Preloader';
 import AccessibilityWidget from '@/components/layout/AccessibilityWidget';
+import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
 
 export const metadata: Metadata = {
   title: {
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Toaster />
         <AccessibilityWidget />
         <ScrollToTopButton />
+        <WhatsAppWidget />
       </body>
     </html>
   );
