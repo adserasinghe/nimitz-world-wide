@@ -48,7 +48,7 @@ export default function AccessibilityWidget() {
   };
 
   return (
-    <div className="fixed bottom-8 right-8 z-[60]">
+    <div className="fixed bottom-8 left-8 z-[60]">
       {isOpen && (
         <Card className="w-64 mb-4 shadow-2xl animate-in fade-in-20 slide-in-from-bottom-5 duration-300">
           <CardHeader className="flex flex-row items-center justify-between pb-2">
