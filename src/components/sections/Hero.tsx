@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="relative w-full py-20 md:py-32 lg:py-40 animate-in fade-in-50 duration-500">
        <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://i.postimg.cc/1RFYDyjm/2148821934.jpg"
           alt="Hero background"
           fill
           className="z-0 object-cover"
