@@ -37,8 +37,8 @@ const services = [
   },
   {
     icon: <Users className="w-8 h-8 text-primary" />,
-    title: "UI/UX Designing",
-    description: "We design intuitive and engaging user interfaces that provide a seamless user experience.",
+    title: "Social Media Marketing",
+ description: "Boost your brand's presence and engage with your audience through strategic social media campaigns across popular platforms.",
   },
 ];
 
