@@ -9,30 +9,32 @@ export default function Portfolio() {
     {
       title: "Corporate Website Redesign",
       description: "A complete overhaul of a B2B tech company's website, focusing on modern UI/UX and lead generation.",
-      image: "https://placehold.co/800x600.png",
+      image: "https://i.postimg.cc/YS9tSv8q/163260.jpg",
       tags: ["Web Development", "UI/UX"],
       hint: "corporate office",
     },
     {
       title: "Fashion E-commerce Store",
       description: "A stylish and performant e-commerce platform for an independent fashion brand, with custom features.",
-      image: "https://placehold.co/800x600.png",
+      image: "https://i.postimg.cc/qBn4gVcn/2150165932.jpg",
       tags: ["E-commerce", "Shopify"],
       hint: "fashion retail",
     },
     {
       title: "Local Business SEO Campaign",
       description: "Increased organic traffic by 200% for a local service business through targeted SEO and content marketing.",
-      image: "https://placehold.co/800x600.png",
+      image: "https://i.postimg.cc/CLXG78B9/68.jpg",
       tags: ["SEO", "Marketing"],
       hint: "local business",
     },
     {
-      title: "SaaS Platform Dashboard",
-      description: "Designed and developed a user-friendly and data-rich dashboard for a growing SaaS company.",
-      image: "https://placehold.co/800x600.png",
-      tags: ["Web App", "React"],
-      hint: "dashboard data",
+      title:"Social Media Marketing",
+      description: "Crafted engaging social media campaigns that significantly increased brand awareness and customer interaction.",
+      image: "https://i.postimg.cc/Nf6X6nt2/167088.jpg",
+      tags: ["Marketing"],
+      hint: "social media",
+
+
     },
   ];
 
