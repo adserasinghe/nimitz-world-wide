@@ -27,7 +27,7 @@ export default function Footer() {
     <footer className="bg-muted py-8 px-4 md:px-6">
       <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
         <div className="flex flex-col gap-4">
-          <Logo />
+           <Logo showName={false} className="[&_img]:w-12 [&_img]:h-12"/>
           <p className="text-muted-foreground">
             Crafting exceptional web experiences for businesses worldwide.
           </p>
