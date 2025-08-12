@@ -12,8 +12,8 @@ import WhatsAppWidget from '@/components/layout/WhatsAppWidget';
 
 export const metadata: Metadata = {
   title: {
-    default: 'Nimitz World Wide - Professional Web Development Services',
-    template: '%s | Nimitz World Wide',
+    default: 'Nimitz World Wide | Excellence of Creativity',
+    template: '%s | Nimitz World Wide | Excellence of Creativity',
   },
   description: 'Nimitz World Wide offers professional web development, e-commerce solutions, and SEO services to help your business grow online. Contact us for a free quote.',
   keywords: ['web development', 'web design', 'SEO services', 'e-commerce websites', 'Nimitz World Wide'],

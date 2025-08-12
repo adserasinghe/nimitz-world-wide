@@ -3,7 +3,7 @@ import { BlogGenerator } from "@/components/dashboard/BlogGenerator";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "AI Blog Generator | Dashboard",
+    title: "AI Blog Generator",
     description: "Use our powerful AI tool to generate high-quality blog post drafts on any topic. Streamline your content creation process.",
     robots: {
       index: false,

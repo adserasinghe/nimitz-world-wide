@@ -8,7 +8,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Portfolio | Nimitz World Wide",
+    title: "Portfolio",
     description: "Explore our portfolio of recent projects, including custom web development, e-commerce stores, app development, and successful digital marketing campaigns.",
 };
 

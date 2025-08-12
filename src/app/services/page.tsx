@@ -9,7 +9,7 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Our Services | Nimitz World Wide",
+    title: "Our Services",
     description: "Discover our comprehensive web services, including custom web design & development, digital marketing, SEO, content writing, and UI/UX design.",
 };
 

@@ -8,7 +8,7 @@ import { Building, Target, Users } from "lucide-react";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "About Us | Nimitz World Wide",
+    title: "About Us",
     description: "Learn about the story, mission, and values of Nimitz World Wide. Meet the talented team of developers, designers, and marketers dedicated to your success.",
 };
 

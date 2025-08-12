@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Contact Us | Nimitz World Wide",
+    title: "Contact Us",
     description: "Get in touch with Nimitz World Wide for a free consultation. Contact us about your web development, e-commerce, or SEO project today.",
 };
 

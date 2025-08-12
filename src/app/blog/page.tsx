@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Blog | Nimitz World Wide",
+    title: "Blog",
     description: "Read the latest articles, tutorials, and insights on web development, SEO, and digital marketing from the experts at Nimitz World Wide.",
 };
 
