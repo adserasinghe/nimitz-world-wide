@@ -4,6 +4,7 @@ import { Logo } from "@/components/logo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Facebook, Linkedin } from "lucide-react";
+import Image from "next/image";
 
 const XIcon = (props: React.SVGProps<SVGSVGElement>) => (
     <svg viewBox="0 0 1200 1227" fill="none" aria-hidden="true" {...props}>
@@ -27,7 +28,12 @@ export default function Footer() {
     <footer className="bg-muted py-8 px-4 md:px-6">
       <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-3">
         <div className="flex flex-col gap-4">
-           <Logo showName={false} className="[&_img]:w-16 [&_img]:h-16"/>
+          <div className="flex items-center gap-2">
+            <Link href="/" prefetch={false}>
+              <Image src="https://i.postimg.cc/cCZdYkTc/471153132-122109371366653918-3126876278288396208-n-removebg-preview.png" alt="Nimitz World Wide Logo" width={64} height={64} className="h-16 w-16" />
+            </Link>
+            <span className="font-headline text-lg font-semibold">Excellence Of Creativity</span>
+          </div>
           <p className="text-muted-foreground">
             Crafting exceptional web experiences for businesses worldwide.
           </p>
