@@ -7,6 +7,7 @@ import Footer from '@/components/layout/Footer';
 import { cn } from '@/lib/utils';
 import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
 import Preloader from '@/components/layout/Preloader';
+import AccessibilityWidget from '@/components/layout/AccessibilityWidget';
 
 export const metadata: Metadata = {
   title: {
@@ -38,6 +39,7 @@ export default function RootLayout({
         <main>{children}</main>
         <Footer />
         <Toaster />
+        <AccessibilityWidget />
         <ScrollToTopButton />
       </body>
     </html>
