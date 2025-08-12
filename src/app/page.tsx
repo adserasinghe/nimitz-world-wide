@@ -8,7 +8,7 @@ import RecentBlogPosts from "@/components/sections/RecentBlogPosts";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-    title: "Home | Nimitz World Wide",
+    title: "Nimitz World Wide | Excellence of Creativity",
     description: "Welcome to Nimitz World Wide. We are a professional web development agency specializing in creating custom websites, e-commerce platforms, and SEO strategies that drive results.",
 };
 
