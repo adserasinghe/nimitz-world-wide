@@ -9,8 +9,12 @@ import ScrollToTopButton from '@/components/layout/ScrollToTopButton';
 import Preloader from '@/components/layout/Preloader';
 
 export const metadata: Metadata = {
-  title: 'Nimitz World Wide',
-  description: 'Professional Web Development Services',
+  title: {
+    default: 'Nimitz World Wide - Professional Web Development Services',
+    template: '%s | Nimitz World Wide',
+  },
+  description: 'Nimitz World Wide offers professional web development, e-commerce solutions, and SEO services to help your business grow online. Contact us for a free quote.',
+  keywords: ['web development', 'web design', 'SEO services', 'e-commerce websites', 'Nimitz World Wide'],
   icons: {
     icon: "/favicon.ico",
   },

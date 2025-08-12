@@ -1,9 +1,16 @@
+
 import Image from "next/image";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Building, Target, Users } from "lucide-react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "About Us | Nimitz World Wide",
+    description: "Learn about the story, mission, and values of Nimitz World Wide. Meet the talented team of developers, designers, and marketers dedicated to your success.",
+};
 
 const teamMembers = [
   {

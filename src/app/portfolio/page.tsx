@@ -1,9 +1,17 @@
+
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Portfolio | Nimitz World Wide",
+    description: "Explore our portfolio of recent projects, including custom web development, e-commerce stores, app development, and successful digital marketing campaigns.",
+};
+
 
 const projects = [
   {

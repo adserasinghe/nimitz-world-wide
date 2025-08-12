@@ -1,17 +1,20 @@
+
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import { Metadata } from "next";
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
-    const post = {
-      slug: params.slug,
-      title: "The Ultimate Guide to Core Web Vitals",
-      description: "Learn how to optimize your site's performance for a better user experience and improved SEO rankings.",
-      image: "https://placehold.co/1280x720.png",
-      hint: "speed performance",
-      date: "May 15, 2024",
-      category: "SEO",
-      author: "Jane Smith",
-      content: `
+// This is a mock. In a real app, you'd fetch this data.
+const getPost = async (slug: string) => {
+  return {
+    slug: slug,
+    title: "The Ultimate Guide to Core Web Vitals",
+    description: "Learn how to optimize your site's performance for a better user experience and improved SEO rankings.",
+    image: "https://placehold.co/1280x720.png",
+    hint: "speed performance",
+    date: "May 15, 2024",
+    category: "SEO",
+    author: "Jane Smith",
+    content: `
 <p class="mb-4">In today's fast-paced digital world, user experience is paramount. A slow, clunky website can drive visitors away in seconds. That's where Google's Core Web Vitals come in. These are a set of specific factors that Google considers important in a webpage's overall user experience.</p>
 <p class="mb-4">Understanding and optimizing for these metrics is crucial not only for keeping your users happy but also for improving your search engine rankings. Let's break them down.</p>
 <h3 class="font-headline text-2xl font-bold my-4">What are the Core Web Vitals?</h3>
@@ -25,7 +28,20 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
 <p class="mb-4">Improving your Core Web Vitals involves a combination of technical optimizations. For LCP, focus on optimizing your server response times, reducing render-blocking JavaScript and CSS, and optimizing your images. For FID, breaking up long tasks and using a web worker can help. To improve CLS, make sure to include size attributes on your images and video elements, and never insert content above existing content, except in response to a user interaction.</p>
 <p class="mb-4">By focusing on these key areas, you can significantly improve your website's performance, leading to happier users and better SEO outcomes.</p>
 `
-    };
+  };
+};
+
+export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+  const post = await getPost(params.slug);
+  return {
+    title: post.title,
+    description: post.description,
+  };
+}
+
+
+export default async function BlogPostPage({ params }: { params: { slug: string } }) {
+    const post = await getPost(params.slug);
 
     return (
         <div className="container mx-auto py-12 px-4 md:px-6 animate-in fade-in-50 duration-500">

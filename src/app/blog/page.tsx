@@ -1,7 +1,14 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Blog | Nimitz World Wide",
+    description: "Read the latest articles, tutorials, and insights on web development, SEO, and digital marketing from the experts at Nimitz World Wide.",
+};
 
 const mockPosts = [
     {
