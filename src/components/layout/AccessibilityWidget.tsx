@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { UniversalAccess, Plus, Minus, SunMoon, Type, X } from 'lucide-react';
+import { Accessibility, Plus, Minus, SunMoon, Type, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -94,7 +94,7 @@ export default function AccessibilityWidget() {
         onClick={toggleWidget}
         aria-label="Toggle Accessibility Menu"
       >
-        <UniversalAccess className="h-7 w-7" />
+        <Accessibility className="h-7 w-7" />
       </Button>
     </div>
   );
