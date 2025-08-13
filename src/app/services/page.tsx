@@ -51,8 +51,8 @@ const solutions = [
       title: "SEO Services",
     },
     {
-      icon: <PenSquare className="w-8 h-8 text-primary" />,
-      title: "UI/UX Designing",
+      icon: <ShoppingCart className="w-8 h-8 text-primary" />,
+      title: "E Commerce Development",
     },
 ];
 
