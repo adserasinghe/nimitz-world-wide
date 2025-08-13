@@ -40,7 +40,7 @@ const services = [
 const solutions = [
     {
       icon: <Code className="w-8 h-8 text-primary" />,
-      title: "App/Web Development",
+      title: "Web Development",
     },
     {
       icon: <BarChart className="w-8 h-8 text-primary" />,
