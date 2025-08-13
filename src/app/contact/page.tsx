@@ -14,7 +14,7 @@ export default function ContactPage() {
     <div className="animate-in fade-in-50 duration-500">
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://i.postimg.cc/wT5pwNZx/113336.jpg"
           alt="Contact Us"
           fill
           className="z-0 object-cover"
