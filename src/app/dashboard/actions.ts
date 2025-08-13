@@ -1,11 +1,15 @@
+
 'use server';
 
 import {generateBlogPost} from '@/ai/flows/generate-blog-post';
 import {
   checkBlogPostAppropriateness,
-  type CheckBlogPostAppropriatenessOutput,
+  CheckBlogPostAppropriatenessOutput,
 } from '@/ai/flows/check-blog-post-appropriateness';
 import {z} from 'zod';
+import { addPost } from '@/lib/blog-posts';
+import { slugify } from '@/lib/utils';
+
 
 const formSchema = z.object({
   topic: z.string().min(5, 'Topic must be at least 5 characters long.'),
@@ -17,6 +21,7 @@ export type FormState = {
   data?: {
     title: string;
     content: string;
+    slug: string;
   } & CheckBlogPostAppropriatenessOutput;
   key?: number;
 };
@@ -51,14 +56,40 @@ export async function generateAndCheckPost(
       content: blogPost.content,
     });
 
-    return {
-      status: 'success',
-      message: 'Blog post generated successfully.',
-      data: {
+    if (!appropriateness.isAppropriate) {
+        return {
+            status: 'success',
+            message: 'Blog post generated, but is not appropriate for publication.',
+            data: {
+                title: blogPost.title,
+                content: blogPost.content,
+                isAppropriate: appropriateness.isAppropriate,
+                reason: appropriateness.reason,
+                slug: ''
+            },
+            key: Date.now(),
+        }
+    }
+
+    const newPost = await addPost({
         title: blogPost.title,
         content: blogPost.content,
+        topic: topic,
+        image: 'https://placehold.co/800x600.png',
+        hint: 'abstract placeholder',
+        category: 'Generated',
+    });
+
+
+    return {
+      status: 'success',
+      message: 'Blog post generated and saved successfully.',
+      data: {
+        title: newPost.title,
+        content: newPost.content,
         isAppropriate: appropriateness.isAppropriate,
         reason: appropriateness.reason,
+        slug: newPost.slug,
       },
       key: Date.now(),
     };

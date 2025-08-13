@@ -1,3 +1,4 @@
+
 'use client';
 
 import {useFormState, useFormStatus} from 'react-dom';
@@ -20,9 +21,12 @@ import {
   AlertCircle,
   ThumbsUp,
   ThumbsDown,
+  Eye,
 } from 'lucide-react';
 import {useEffect, useRef, useState} from 'react';
 import {useToast} from '@/hooks/use-toast';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const initialState: FormState = {
   status: 'idle',
@@ -34,7 +38,7 @@ function SubmitButton() {
   return (
     <Button type="submit" disabled={pending} className="w-full">
       {pending ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-      {pending ? 'Generating...' : 'Generate Post'}
+      {pending ? 'Generating...' : 'Generate and Save Post'}
     </Button>
   );
 }
@@ -42,6 +46,7 @@ function SubmitButton() {
 export function BlogGenerator() {
   const [state, formAction] = useFormState(generateAndCheckPost, initialState);
   const {toast} = useToast();
+  const router = useRouter();
   const formRef = useRef<HTMLFormElement>(null);
   const [result, setResult] = useState<FormState['data']>();
 
@@ -53,11 +58,20 @@ export function BlogGenerator() {
         description: state.message,
       });
       setResult(undefined);
-    } else if (state.status === 'success') {
-      formRef.current?.reset();
-      setResult(state.data);
+    } else if (state.status === 'success' && state.data) {
+        formRef.current?.reset();
+        if (state.data.isAppropriate && state.data.slug) {
+             toast({
+                title: 'Success!',
+                description: 'Post generated and saved. Redirecting...',
+             });
+             router.push(`/blog/${state.data.slug}`);
+        } else {
+            // if not appropriate, just show the content but don't save or redirect
+            setResult(state.data);
+        }
     }
-  }, [state, toast]);
+  }, [state, toast, router]);
 
   return (
     <div className="space-y-8">
@@ -79,7 +93,7 @@ export function BlogGenerator() {
         </CardContent>
       </Card>
 
-      {result && (
+      {result && !result.slug && (
         <Card key={state.key} className="animate-in fade-in-50 duration-500">
           <CardHeader>
             <CardTitle className="font-headline text-3xl">
@@ -112,17 +126,9 @@ export function BlogGenerator() {
             />
           </CardContent>
           <CardFooter>
-            <Button
-              disabled={!result.isAppropriate}
-              onClick={() =>
-                toast({
-                  title: 'Published!',
-                  description: 'This is a demo. The post has not been saved.',
-                })
-              }
-            >
-              <CheckCircle2 className="mr-2 h-4 w-4" />
-              Publish Post
+             <Button disabled>
+                <CheckCircle2 className="mr-2 h-4 w-4" />
+                Post Not Saved
             </Button>
           </CardFooter>
         </Card>

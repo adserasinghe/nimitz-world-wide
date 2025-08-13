@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -34,91 +34,81 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Edit, Loader2 } from 'lucide-react';
-
-const mockPosts = [
-    {
-      slug: "demystifying-react-hooks",
-      title: "Demystifying React Hooks",
-      description: "A deep dive into useState, useEffect, and custom hooks to level up your React skills.",
-      content: "Full content of Demystifying React Hooks...",
-    },
-    {
-      slug: "the-ultimate-guide-to-core-web-vitals",
-      title: "The Ultimate Guide to Core Web Vitals",
-      description: "Learn how to optimize your site's performance for a better user experience and improved SEO rankings.",
-      content: "Full content of The Ultimate Guide to Core Web Vitals...",
-    },
-    {
-      slug: "headless-commerce-is-it-right-for-you",
-      title: "Headless Commerce: Is It Right for You?",
-      description: "Exploring the pros and cons of headless architecture for your next e-commerce project.",
-      content: "Full content of Headless Commerce: Is It Right for You?...",
-    },
-    {
-      slug: "5-common-mistakes-in-website-design",
-      title: "5 Common Mistakes in Website Design",
-      description: "Avoid these common pitfalls to create a website that is both beautiful and functional.",
-      content: "Full content of 5 Common Mistakes in Website Design...",
-    },
-];
+import { getMockPostsForUpdate, Post } from '@/lib/blog-posts';
 
 const formSchema = z.object({
   title: z.string().min(5, 'Title must be at least 5 characters long.'),
   content: z.string().min(20, 'Content must be at least 20 characters long.'),
 });
 
-type Post = typeof mockPosts[0];
+type UpdateablePost = {
+    slug: string;
+    title: string;
+    description: string;
+    content: string;
+}
 
 export function UpdateBlogForm() {
-  const [posts, setPosts] = useState(mockPosts);
+  const [posts, setPosts] = useState<UpdateablePost[]>([]);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
+  const [currentPost, setCurrentPost] = useState<UpdateablePost | null>(null);
   const { toast } = useToast();
+
+  useEffect(() => {
+    setPosts(getMockPostsForUpdate());
+  }, []);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
   });
 
-  const handleEditClick = (post: Post) => {
+  const handleEditClick = (post: UpdateablePost) => {
+    setCurrentPost(post);
     form.reset({
       title: post.title,
       content: post.content,
     });
+    setIsDialogOpen(true);
   };
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    if (!currentPost) return;
     setIsSubmitting(true);
     // Simulate API call to update the post
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log('Updated post:', values);
+
+    // Update the post in the local state
+    setPosts(posts.map(p => p.slug === currentPost.slug ? { ...p, ...values } : p));
+    
     toast({
       title: 'Success!',
       description: 'Blog post updated successfully.',
     });
     setIsSubmitting(false);
     setIsDialogOpen(false);
+    setCurrentPost(null);
   };
 
   return (
     <div className="space-y-4">
       {posts.map((post) => (
-        <Dialog key={post.slug} open={isDialogOpen && form.getValues('title') === post.title} onOpenChange={(open) => {
-          if (!open) setIsDialogOpen(false);
-        }}>
-          <Card>
+        <Card key={post.slug}>
             <CardHeader>
               <CardTitle>{post.title}</CardTitle>
               <CardDescription>{post.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <DialogTrigger asChild>
-                <Button variant="outline" onClick={() => { handleEditClick(post); setIsDialogOpen(true); }}>
+                <Button variant="outline" onClick={() => handleEditClick(post)}>
                   <Edit className="mr-2 h-4 w-4" />
                   Edit Post
                 </Button>
-              </DialogTrigger>
             </CardContent>
           </Card>
+      ))}
+
+        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogContent className="sm:max-w-[625px]">
             <DialogHeader>
               <DialogTitle>Edit Post</DialogTitle>
@@ -166,7 +156,6 @@ export function UpdateBlogForm() {
             </Form>
           </DialogContent>
         </Dialog>
-      ))}
     </div>
   );
 }
