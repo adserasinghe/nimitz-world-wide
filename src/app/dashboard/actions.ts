@@ -3,7 +3,7 @@
 import {generateBlogPost} from '@/ai/flows/generate-blog-post';
 import {
   checkBlogPostAppropriateness,
-  CheckBlogPostAppropriatenessOutput,
+  type CheckBlogPostAppropriatenessOutput,
 } from '@/ai/flows/check-blog-post-appropriateness';
 import {z} from 'zod';
 

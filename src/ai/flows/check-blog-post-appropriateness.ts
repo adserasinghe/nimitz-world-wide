@@ -10,13 +10,13 @@
 import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
-export const CheckBlogPostAppropriatenessInputSchema = z.object({
+const CheckBlogPostAppropriatenessInputSchema = z.object({
   title: z.string().describe('The title of the blog post.'),
   content: z.string().describe('The content of the blog post.'),
 });
 export type CheckBlogPostAppropriatenessInput = z.infer<typeof CheckBlogPostAppropriatenessInputSchema>;
 
-export const CheckBlogPostAppropriatenessOutputSchema = z.object({
+const CheckBlogPostAppropriatenessOutputSchema = z.object({
   isAppropriate: z.boolean().describe('Whether the blog post is appropriate for publication.'),
   reason: z.string().describe('The reason why the blog post is or is not appropriate.'),
 });
