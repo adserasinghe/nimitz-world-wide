@@ -26,16 +26,6 @@ const services = [
     description: "Powerful e-commerce platforms that provide a seamless shopping experience for your customers and are easy for you to manage.",
   },
   {
-    icon: <BarChart className="w-8 h-8 text-primary" />,
-    title: "Graphic Designing",
-    description: "We create stunning visuals for your brand, from logos to marketing materials that will make you stand out.",
-  },
-  {
-    icon: <Search className="w-8 h-8 text-primary" />,
-    title: "Digital Marketing",
-    description: "We help you reach your target audience through various online channels, including social media, and email marketing.",
-  },
-  {
     icon: <PenSquare className="w-8 h-8 text-primary" />,
     title: "SEO & Content Writing",
     description: "Improve your online visibility and rank higher on search engines. We drive organic traffic to your site through proven SEO strategies.",
@@ -71,7 +61,7 @@ export default function ServicesPage() {
     <div className="animate-in fade-in-50 duration-500">
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
           <Image
-              src="https://placehold.co/1920x1080.png"
+              src="https://i.postimg.cc/FFnHX0H9/2149367126.jpg"
               alt="Our Services"
               fill
               className="z-0 object-cover"

@@ -14,12 +14,12 @@ export const metadata: Metadata = {
 
 const teamMembers = [
   {
-    name: "John Doe",
+    name: "Kasun Tharaka",
     title: "Founder & CEO",
     avatar: "https://placehold.co/200x200.png",
     hint: "man professional portrait"
   },
-  {
+  /*{
     name: "Jane Smith",
     title: "Lead Developer",
     avatar: "https://placehold.co/200x200.png",
@@ -36,7 +36,7 @@ const teamMembers = [
     title: "Marketing Specialist",
     avatar: "https://placehold.co/200x200.png",
     hint: "woman marketing portrait"
-  }
+  }*/
 ];
 
 export default function AboutPage() {
@@ -44,7 +44,7 @@ export default function AboutPage() {
     <div className="animate-in fade-in-50 duration-500">
       <section className="relative w-full py-20 md:py-32 lg:py-40 bg-card">
         <Image
-          src="https://placehold.co/1920x1080.png"
+          src="https://i.postimg.cc/KYX5qKMf/104681.jpg"
           alt="About Us"
           fill
           className="z-0 object-cover"
@@ -67,7 +67,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-                <Image src="https://placehold.co/800x600.png" alt="Our Story" width={800} height={600} className="rounded-lg shadow-lg" data-ai-hint="office history"/>
+                <Image src="https://i.postimg.cc/c40CmdC3/1972.jpg" alt="Our Story" width={800} height={600} className="rounded-lg shadow-lg" data-ai-hint="office history"/>
             </div>
             <div className="space-y-4">
               <div className="inline-block rounded-lg bg-muted px-3 py-1 text-sm">Our Story</div>
