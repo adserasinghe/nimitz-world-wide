@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { CheckCircle, Code, AppWindow, Search, PenSquare, BarChart, Users } from "lucide-react";
+import { CheckCircle, Code, AppWindow, Search, PenSquare, BarChart, Users, ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -19,6 +19,11 @@ const services = [
     icon: <Code className="w-8 h-8 text-primary" />,
     title: "Web Design & Development",
     description: "Custom websites built with modern technologies to meet your specific business needs. Fast, secure, and scalable solutions.",
+  },
+  {
+    icon: <ShoppingCart className="w-8 h-8 text-primary" />,
+    title: "Ecommerce Development",
+    description: "Powerful e-commerce platforms that provide a seamless shopping experience for your customers and are easy for you to manage.",
   },
   {
     icon: <BarChart className="w-8 h-8 text-primary" />,
